@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    background-color: #2f638f;
+    margin: 0;
+}
+
+.logo {
+    margin: 25px 0;
+}
+
+.banner {
+    margin-bottom: 8px;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.join {
+    display: flex;
+    justify-content: space-around;
+}
+
+.email {
+    text-decoration: underline;
+    color: red;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 250px;
+}
+
+.footer {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}

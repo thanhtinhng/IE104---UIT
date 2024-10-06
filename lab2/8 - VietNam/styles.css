@@ -121,5 +121,5 @@ td {
 }
 
 td:not(:last-child) {
-    border-right: 1px dashed black; /* Border đứt cho cột dọc, không tính cột cuối */
-  }
+    border-right: 1px dashed black;
+}
