@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url(./images/co-vietnam.png);
+    background-repeat: repeat-y;
+    background-position: center; */
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.desc {
+    background-image: url(./images/co-vietnam.png);
+    background-repeat: repeat-y;
+    background-position: center;
+    margin: 0 30px;
+    text-align: justify;
+}
+
+.map-vn>.doan1>img {
+    float: left;
+    margin-right: 40px;
+}
+
+.vnitw {
+    width: 300px;
+    float: right;
+    margin-left: 20px;
+}
+
+.top {
+    padding-bottom: 30px;
+    position:inherit;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.HN-header {
+    color: white;
+    background-color: red;
+    padding: 4px 0;
+    padding-left: 10px;
+}
+
+.H-vang {
+    float: left;
+}
+
+.ho-guom {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.lang-bac-img {
+    width: 290px;
+    float: right;
+    margin-left: 20px;
+}
+
+.HUE-header {
+    color: white;
+    background-color: purple;
+    padding: 4px 0;
+    padding-left: 10px;
+}
+
+.H-tim {
+    float: left;
+}
+
+.cau-trang {
+    width: 55%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.cau-trang-desc {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dien-thai-hoa {
+    float: left;
+    width: 350px;
+    margin-right: 20px;
+}
+
+.HUE-doan3>img {
+    float: right;
+    width: 350px;
+    margin-left: 20px;
+}
+
+.HCM-header {
+    color: white;
+    background-color: violet;
+    padding: 4px 0;
+    padding-left: 10px;
+}
+
+.T {
+    float: left;
+}
+
+.cho-ben-thanh {
+    width: 500px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.HCM-table {
+    text-align: justify;
+}
+
+td {
+    padding: 0 10px;
+}
+
+td:not(:last-child) {
+    border-right: 1px dashed black; /* Border đứt cho cột dọc, không tính cột cuối */
+  }
