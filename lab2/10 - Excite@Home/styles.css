@@ -1,0 +1,12 @@
+body {
+    background-image: url('./images/background.gif');
+    background-repeat: repeat-y;
+    background-size: contain;
+    color: white;
+}
+
+.content {
+    background-color: black;
+    width: 628px;
+    margin: 0 auto;
+}
