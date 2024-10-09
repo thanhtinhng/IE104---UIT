@@ -1,8 +1,5 @@
-body {
+.container {
     font-family: Arial, Helvetica, sans-serif;
-    /* background-image: url(./images/co-vietnam.png);
-    background-repeat: repeat-y;
-    background-position: center; */
 }
 
 h1 {

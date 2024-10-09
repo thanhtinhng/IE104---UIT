@@ -1,6 +1,10 @@
 body {
-    text-align: center;
     background-color: #2f638f;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
     margin: 0;
     font-family: cursive;
     color: #2f638f;
