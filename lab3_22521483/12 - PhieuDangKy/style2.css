@@ -1,0 +1,102 @@
+.form-container {
+    background-color: #cdfffe;
+    margin: 0 auto;
+    width: 700px;
+    padding-right: 50px;
+    padding-top: 10px;
+    border-radius: 20px;
+    box-shadow: 12px 12px 15px #4448f7, 0px 0px 8px rgb(146, 146, 146);
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./images/khuyen-mai.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    width: 590px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #0e2ac5;
+    font-size: 18px;
+}
+
+.label {
+    text-align: right;
+    margin-right: 50px;
+}
+
+input {
+    height: 20px;
+    margin: auto 0;
+    background-color: #a2cbfe8f;
+    border-radius: 20px;
+    border: 1px blue solid;
+    padding: 5px 10px
+}
+
+select {
+    background-color: #a2cbfe8f;
+    border-radius: 20px;
+    border: 1px blue solid;
+    padding: 5px
+}
+
+textarea {
+    background-color: #a2cbfe8f;
+    border-radius: 20px;
+    border: 1px blue solid;
+    padding: 10px
+}
+
+#sanpham {
+    padding: 8px
+}
+
+.opt-sex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#nghe {
+    height: 30px;
+    margin: auto 0;
+}
+
+.submit-btn-row, .notif {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.submit-btn {
+    cursor: pointer;
+    padding: 5px 20px;
+    color: white;
+    border: white;
+    background: linear-gradient(to bottom, #003fed, #00adcd);
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to bottom, #00adcd, #003fed);
+}
+
+.notif-text {
+    color: #ec14f8;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.title {
+    color: white;
+    text-shadow: 2px 2px 1px #0e2ac5, 1px 1px 15px #0e2ac5;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding-bottom: 50px;
+}

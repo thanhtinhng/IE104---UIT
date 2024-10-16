@@ -1,0 +1,27 @@
+.container {
+    border: 1px black solid;
+    width: 350px;
+    padding: 20px;
+    margin: 0 auto
+}
+
+.title {
+    text-align: center;
+    color: rgb(232, 0, 0);  
+    margin-top: 0
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+input {
+    width: 200px;
+}
+
+button {
+    grid-column: 2;
+    width: 100px;
+}
