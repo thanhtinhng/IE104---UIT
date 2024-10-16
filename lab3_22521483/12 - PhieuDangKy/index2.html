@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+        </div>
+            <div class="form-container">
+                <div class="grid-container">
+                        <p class="label">Họ tên</p>
+                        <input type="text" class="name-input">
+    
+                        <p class="label">Địa chỉ</p>
+                        <textarea rows="5" cols="70"></textarea>
+    
+                        <p class="label">Điện thoại</p>
+                        <input type="text">
+    
+                        <p class="label">Giới tính</p>
+                        <div class="opt-sex">
+                            <input type="radio" name="gioitinh" id="nam">
+                            <label for="nam">Nam</label>
+                            <input type="radio" name="gioitinh" id="nu">
+                            <label for="nu">Nữ</label>
+                        </div>
+    
+                        <p class="label">Nghề nghiệp</p>
+                        <select name="nghe" id="nghe">
+                            <option value="doctor">Bác sĩ</option>
+                            <option value="engineer">Kỹ sư</option>
+                            <option value="teacher">Giáo viên</option>
+                            <option value="other">Khác</option>
+                        </select>
+    
+                        <p class="label">Chọn sản phẩm tham gia</p>
+                        <select name="sanpham" id="sanpham" multiple>
+                            <option value="kemdanhrang">Kem đánh răng</option>
+                            <option value="botgiat">Bột giặt</option>
+                            <option value="daugoi">Dầu gội đầu</option>
+                            <option value="suatam">Sữa tắm</option>
+                        </select>
+    
+                        <p class="label">Số người dự đoán tham gia</p>
+                        <input type="text">
+    
+                        <div class="submit-btn-row">
+                            <button class="submit-btn">Đồng ý</button>
+                        </div>
+                        
+                        <div class="notif">
+                            <p class="notif-text">Bạn đã đăng ký thành công!!!</p>
+                        </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
