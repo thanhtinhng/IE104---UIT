@@ -1,0 +1,46 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.grid-item {
+    padding: 30px 20px;
+}
+
+.image {
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+.text {
+    font-style: italic;
+}
+
+.button {
+    width: 80px;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.button:hover {
+    background-color: rgb(158, 158, 158);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
