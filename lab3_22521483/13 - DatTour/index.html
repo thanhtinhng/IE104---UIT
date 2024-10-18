@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">ĐĂNG KÝ DU LỊCH</h1>
+        </div>
+
+        <div class="form-container">
+            <table class="form">
+                <tr>
+                    <td>
+                        <p class="label">Họ tên</p>
+                    </td>
+                    <td>
+                        <input type="text" class="name-input">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="label">Địa chỉ</p>
+                    </td>
+                    <td>
+                        <textarea rows="5" cols="70"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="label">Điện thoại</p>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="label">Khách Việt Nam</p>
+                    </td>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="label">Chọn tour</p>
+                    </td>
+                    <td>
+                        <select name="tour" id="tour">
+                            <optgroup label="Miền Bắc">
+                                <option value="1">Hà Nội - Hạ Long - Sapa</option>
+                                <option value="2">Hà Nội - Chùa Hương - Ninh Bình</option>
+                                <option value="3">Hà Nội - Cát Bà - Tuần Châu</option>
+                            </optgroup>
+                            <optgroup label="Miền Trung">
+                                <option value="4">Huế - Bạch Mã - Đà Nẵng</option>
+                                <option value="5">Nha Trang - Đà Lạt</option>
+                                <option value="6">Buôn Mê Thuột - Gia Lai - Kontum</option>
+                            </optgroup>
+                            <optgroup label="Miền Nam">
+                                <option value="7">TpHCM - Cần Thơ - Cà Mau</option>
+                                <option value="8">Phú Quốc - Côn Đảo</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="label">Phương tiện</p>
+                    </td>
+                    <td>
+                        <input type="radio" name="maybay" id="maybay">
+                        <label for="maybay">Máy bay</label>
+                        <br> <br>
+                        <input type="radio" name="xe" id="xe">
+                        <label for="xe">Xe du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="so-luong-khach">
+                        <div class="so-luong-box">
+                            <p class="label-so-luong">Số lượng đoàn khách</p>
+                            <label for="nguoilon">Người lớn</label>
+                            <input type="text" name="nguoilon">
+                            <label for="treem">Trẻ em</label>
+                            <input type="text" name="treem">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="label">Ghi chú thêm</p>
+                    </td>
+                    <td>
+                        <textarea rows="5" cols="70"></textarea>
+                    </td>
+                </tr>
+                <tr class="submit-btn-row">
+                    <td colspan="2">
+                        <button class="submit-btn">Đồng ý</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p class="notif">Bạn đã đăng ký thành công!!!</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
