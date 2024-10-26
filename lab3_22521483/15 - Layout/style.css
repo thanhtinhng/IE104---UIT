@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+}
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-background {
+    height: 130px;
+    background-image: url(./images/nen-hoa-co.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    text-align: center;
+    padding-top: 35px;
+    color: white;
+    text-shadow: 4px 4px 3px purple;
+    font-size: 40px;
+}
+
+.main-layout {
+    display: flex;
+}
+
+.mucluc {
+    position: relative;
+}
+
+.mucluc-background {
+    display: block;
+}
+
+.sidebar1 {
+    width: 155px;
+    position: absolute;
+    top: 46px;
+    left: 11px;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-18deg);
+}
+
+.sidebar2 {
+    width: 157px;
+    position: absolute;
+    top: 286px;
+    left: 87px;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(17deg);
+    text-align: right;
+}
+
+a {
+    margin: 5px 0;
+    opacity: 0;
+}
+
+/* ------------------------------MẸ---------------------- */
+
+.content-container {
+    width: 100%;
+}
+
+.header-content-me {
+    background-color: rgb(254, 201, 253);
+    text-align: center;
+}
+
+.header-content-me h1 {
+    font-size: 50px;
+    padding: 20px 0;
+    margin: 0;
+    color: rgb(233, 22, 150);
+}
+
+
+.content-me {
+    font-style: italic;
+    font-size: 25px;
+    background-color: rgb(252, 254, 204);
+    text-align: center;
+}
+
+.text-blue-me {
+    padding-top: 20px;
+    color: rgb(0, 0, 218);
+}
+
+.text-violet-me {
+    color: blueviolet;
+}
+
+.text-green-me {
+    padding-bottom: 20px;
+    color: rgb(0, 176, 0);
+}
+
+
+.line-me {
+    width: 500px;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin: 15px auto;
+}
+
+
+/* -------------------------------PHÚ QUỐC------------------------ */
+
+.content-container-phuquoc {
+    background-image: url(./images/hoang-hon-phu-quoc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    width: 100%;
+}
+
+.header-container-phuquoc {
+    margin-top: 40px;
+}
+
+.header-phuquoc {
+    text-align: center;
+    color: yellow;
+}
+
+.content-wrapper-phuquoc {
+    margin: 0 120px;
+}
+
+.section-phuquoc {
+    margin-bottom: 20px;
+}
+
+.paragraph-phuquoc {
+    color: white;
+    font-style: italic;
+    text-indent: 50px;
+}
+
+.subheader-phuquoc {
+    color: red;
+}
+
+.subheader-phuquoc:nth-of-type(2) {
+    color: orange;
+}
+
+.subheader-phuquoc:nth-of-type(3) {
+    color: rgb(58, 247, 0);
+}
+
+.subheader-phuquoc:nth-of-type(4) {
+    color: #fd00fe;
+}
+
+/* -------------------------------ĐỊNH DẠNG VĂN BẢN------------------------ */
+.center-text-dinhdang {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.highlight-text-dinhdang {
+    color: rgb(51, 216, 0);
+}
+
+.italic-text-dinhdang {
+    font-style: italic;
+    padding: 0 25%;
+}
+
+.italic-text-dinhdang>p {
+    margin: 10px auto;
+}
+
+.underline-bold-dinhdang {
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.code-block-dinhdang {
+    display: block;
+    background-color: rgb(235, 235, 235);
+    width: 700px;
+    padding: 10px 0;
+    color: blue;
+}
+
+.normal-font-dinhdang {
+    font-style: normal;
+}
+
+.red-text-dinhdang {
+    color: red;
+}

@@ -1,0 +1,46 @@
+.content {
+    border: 1px solid black;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    font-size: 36px;
+}
+
+.header>span {
+    font-weight: bold;
+    color: blue;
+}
+
+.button-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: rgb(98, 98, 98);
+}
+
+.shirt {
+    color: pink;
+    font-size: 34px;
+}
+
+.vest {
+    color: blue;
+    font-size: 34px;
+}

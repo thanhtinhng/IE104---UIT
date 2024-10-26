@@ -1,0 +1,31 @@
+.container {
+    background-color: #f2f3f5;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.box {
+    padding: 10px;
+    border-bottom: red 1px dashed;
+    display: flex;
+}
+
+.last {
+    border-bottom: none;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.desc {
+    color: #888d97;
+}
