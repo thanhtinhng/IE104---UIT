@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px black solid;
+            width: 35%;
+        }
+        input {
+            width: 200px;
+        }
+        button {
+            width: 150px;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>GIẢI PHƯƠNG TRÌNH BẬC 1</h2>
+        <p>ax + b = 0</p>
+        <input type="text" id="a" placeholder="Hệ số a"> <br>
+        <input type="text" id="b" placeholder="Hệ số b"> <br>
+        <button type="button" id="btn1">Giải Phương Trình</button>
+        <p id="result">Hãy nhập hệ số <strong>a b</strong></p>
+    </div>
+    
+    <script>
+        let phuongTrinhBac1 = {
+            a: null,
+            b: null,
+            giai: function () {
+                let a = this.a
+                let b = this.b
+                if (a === 0) {
+                    if (b === 0) {
+                        return '<strong>Phương trình có vô số nghiệm.</strong>'
+                    } else {
+                        return '<strong>Phương trình vô nghiệm.</strong>'
+                    }
+                } else {
+                    let x = -b / a;
+                    return `Nghiệm của phương trình là <strong>x = ${x}</strong>`
+                }
+            }
+        }
+
+        document.getElementById('a').addEventListener('input', (event) => {
+            phuongTrinhBac1.a = parseInt(event.target.value);
+        });
+
+        document.getElementById('b').addEventListener('input', (event) => {
+            phuongTrinhBac1.b = parseInt(event.target.value);
+        });
+
+        let c = document.getElementById('btn1')
+
+        c.addEventListener("click", () => {
+            var r = document.getElementById('result')
+            r.innerHTML = phuongTrinhBac1.giai()
+        })
+    </script>
+</body>
+
+</html>
