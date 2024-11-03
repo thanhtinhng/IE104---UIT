@@ -57,17 +57,19 @@
             }
         }
 
-        document.getElementById('a').addEventListener('input', (event) => {
-            phuongTrinhBac1.a = parseInt(event.target.value);
-        });
+        // document.getElementById('a').addEventListener('input', (event) => {
+        //     phuongTrinhBac1.a = parseInt(event.target.value);
+        // });
 
-        document.getElementById('b').addEventListener('input', (event) => {
-            phuongTrinhBac1.b = parseInt(event.target.value);
-        });
+        // document.getElementById('b').addEventListener('input', (event) => {
+        //     phuongTrinhBac1.b = parseInt(event.target.value);
+        // });
 
         let c = document.getElementById('btn1')
 
         c.addEventListener("click", () => {
+            phuongTrinhBac1.a = parseInt(document.getElementById('a').value)
+            phuongTrinhBac1.b = parseInt(document.getElementById('b').value)
             var r = document.getElementById('result')
             r.innerHTML = phuongTrinhBac1.giai()
         })
