@@ -5,21 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .container {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        .grid-container {
+            margin: 0 auto;
+            background-color: rgb(238, 238, 238);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 50%;
+            box-shadow: 2px 2px 15px rgb(195, 195, 195);
+        }
+
+        .grid-2 {
+            grid-column: span 2;
+        }
+
+        .input {
+            border: none;
+            padding: 10px;
+        }
+
+        .btn {
+            border: none;
+            background-color:dodgerblue;
+            color: white;
+            width: 130px;
+            padding: 15px;
+        }
+
+        .btn:hover {
+            background-color: rgb(99, 174, 249);
+            cursor: pointer;
+        }
+
+        .header {
+            text-align: center;
+            color: blueviolet;
+        }
+
+        .explain1 {
+            text-align: center;
+            color: rgb(122, 122, 122);
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
-    <h2 class="header">ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h2>
-    <p class="explain1">
-        Góp ý của bạn sẽ được chúng tôi xem xét, vui long nhập tiếng việt có dấu
-        <br>
-        Các ý kiến đóng góp nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có)
-    </p>
-    <div class="grid-container">
-        
+    <div class="container">
+        <h2 class="header">ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h2>
+        <p class="explain1">
+            Góp ý của bạn sẽ được chúng tôi xem xét, vui long nhập tiếng việt có dấu
+            <br>
+            Các ý kiến đóng góp nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có)
+        </p>
+        <div class="grid-container">
+            <input type="text" placeholder="Họ và tên" class="grid-1 input" id="hoTen">
+            <input type="text" placeholder="Mã thẻ" class="grid-1 input" id="maThe">
+            <input type="text" placeholder="Số điện thoại" class="grid-1 input" id="sdt">
+            <input type="text" placeholder="E-mail" class="grid-1 input" id="mail">
+            <select name="loai-kh" id="loai-kh" class="grid-1 input">
+                <option value="" selected hidden>Chọn loại khách hàng</option>
+                <option value="Thường">Thường</option>
+                <option value="Vip">Vip</option>
+            </select>
+            <input type="text" placeholder="Mã hóa đơn" class="grid-1 input" id="maHD">
+            <textarea name="mo-ta" id="moTa" placeholder="Chi tiết mô tả" rows="6" class="grid-2 input"></textarea>
+            <button class="btn" id="btn">GỬI GÓP Ý <i class="fa-brands fa-facebook-messenger"></i></button>
+        </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/e319cbe95c.js" crossorigin="anonymous"></script>
     <script>
+        let announcement = {
+            hoTen: '',
+            maThe: '',
+            sdt: '',
+            mail: '',
+            loaiKH: '',
+            maHD: '',
+            moTa: '',
+        }
+
+        document.getElementById('btn').addEventListener("click", () => {
+            let inputs = document.getElementsByClassName('input')
+            for (let input of inputs) {
+                announcement[input.id] = input.value
+            }
+            console.log(announcement)
+            alert(`Họ và tên: ${announcement.hoTen}\nMã thẻ: ${announcement.maThe}\nSố điện thoại: ${announcement.sdt}\nE-Mail: ${announcement.mail}\nLoại khách hàng: ${announcement.loaiKH}\nMã hóa đơn: ${announcement.maHD}\nMô tả: ${announcement.moTa}`)
+        })
 
     </script>
 </body>
