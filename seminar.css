@@ -1,48 +1,28 @@
-/* Block chính */
-.card {
-    border: 1px solid #ddd;
-    padding: 16px;
-    border-radius: 8px;
-  }
-  
-  
-  .card__title {
-    font-size: 1.5em;
-    margin-bottom: 8px;
-  }
-  
-  
-  .card__description {
-    font-size: 1em;
-    color: #555;
-  }
-  
-  
-  .card__footer {
-    display: flex;
-    gap: 8px;
-    margin-top: 16px;
-  }
-  
-  
-  /* Block lồng bên trong */
-  .button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  
-  .button--primary {
-    background-color: #4caf50;
-    color: #fff;
-  }
-  
-  
-  .button--secondary {
-    background-color: #f44336;
-    color: #fff;
-  }
-  
+.btn {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 7px 12px;
+  border: 1px solid #D5D5D5;
+  background-image: linear-gradient(#EEE, #DDD);
+  font: 700 13px/18px Helvetica, Arial;
+}
+
+.btn--success {
+  color: #FFF;
+  background: #4CAF50 linear-gradient(#66BB6A, #4CAF50) repeat-x;
+  border-color: #388E3C;
+}
+
+.btn--danger {
+  color: #D32F2F;
+  background: #FFCDD2 linear-gradient(#EF9A9A, #FFCDD2) repeat-x;
+  border-color: #B71C1C;
+}
+
+.btn__icon {
+  margin-right: 5px;
+}
+
+.btn__text {
+  vertical-align: middle;
+}
