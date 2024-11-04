@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #97b484, #2e518b);
+        }
+
+        .container {
+            width: 40%;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f7f7;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            background-color: #4169e3;
+            padding: 10px;
+        }
+
+        .header-text {
+            margin: 8px;
+        }
+
+        .input {
+            margin-bottom: 10px;
+        }
+
+        #btn {
+            margin-top: 5px;
+            width: 100px;
+            height: 30px;
+            margin: 0 auto;
+            background-color: #00bffe;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .result-container {
+            text-align: center;
+        }
+
+        .result-header {
+            font-weight: bold;
+        }
+
+        #bmi {
+            color: #1c1cd4;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        #result {
+            color: red;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        #advice {
+            color: red;
+            font-weight: 600;
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="header-text">TÍNH CHỈ SỐ BMI</p>
+        </div>
+        <div class="content">
+            <label for="weight">Nhập cân nặng?</label>
+            <input type="text" id="weight" class="input">
+            <label for="height">Nhập chiều cao?</label>
+            <input type="text" id="height" class="input">
+            <label for="age">Chọn loại tuổi?</label>
+            <select name="age" id="age" class="input">
+                <option value="1">Trung niên</option>
+                <option value="2">Trung niên, già lớn tuổi</option>
+                <option value="3">Già, lớn tuổi</option>
+            </select>
+            <button id="btn">TÍNH BMI</button>
+            <div class="result-container">
+                <p class="result-header">KẾT QUẢ</p>
+                <p id="bmi"></p>
+                <p id="result"></p>
+                <p id="advice"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const adviceMap = {
+            "obese_1": {
+                "1": "Khám định kỳ",
+            },
+            "obese_2": {
+                "2": "Tập thể dục thường xuyên"
+            },
+            "obese_3": {
+                "3": "Hạn chế ăn mỡ động vật"
+            }
+        };
+
+        // tính BMI, phân loại, và đưa ra lời khuyên
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById("weight").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const ageGroup = document.getElementById("age").value;
+
+            if (isNaN(weight) || isNaN(height) || height <= 0) {
+                alert("Vui lòng nhập cân nặng và chiều cao hợp lệ");
+                return;
+            }
+
+            // tính BMI
+            const bmi = weight / (height * height);
+            const roundedBMI = parseFloat(bmi.toFixed(2));
+
+            // phân loại BMI và lời khuyên
+            let category = "";
+            let advice = "";
+
+            if (bmi < 18.5) {
+                category = "Dưới chuẩn";
+            } else if (bmi < 25) {
+                category = "Bình thường";
+            } else if (bmi < 30) {
+                category = "Thừa cân";
+            } else if (bmi < 35) {
+                category = "Béo phì độ 1";
+                advice = adviceMap["obese_1"][ageGroup];
+            }
+            else if (bmi < 40) {
+                category = "Béo phì độ 2";
+                advice = adviceMap["obese_2"][ageGroup];
+            }
+            else {
+                category = "Béo phì độ 3";
+                advice = adviceMap["obese_3"][ageGroup];
+            }
+
+            // cập nhật nội dung các thẻ <p>
+            document.getElementById("bmi").innerText = `${roundedBMI}`;
+            document.getElementById("result").innerText = `Phân loại: ${category}`;
+            document.getElementById("advice").innerText = advice ? `${advice}` : '';
+        }
+
+        document.getElementById("btn").addEventListener("click", calculateBMI);
+    </script>
+</body>
+
+</html>
