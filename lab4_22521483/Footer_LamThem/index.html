@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            background-color: #f9f9f9;
+        }
+
+        .col {
+            width: 20%;
+            padding: 0 30px;
+        }
+
+        .connect {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-item {
+            margin: 5px 0;
+        }
+
+        .qr {
+            display: flex;
+        }
+
+        .mobile-btn {
+            display: flex;
+        }
+
+        .header {
+            font-weight: bold;
+        }
+
+        .doitac {
+            width: 200px;
+        }
+
+        .salenoti {
+            width: 200px;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: rgb(192, 192, 192) 2px solid;
+            outline: none;
+        }
+
+        button {
+            color: white;
+            background-color: rgb(49, 136, 223);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        .doitac {
+            margin: 10px 0;
+        }
+
+        .qr-img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .mobile-btn {
+            background-color: black;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-logo {
+            width: 15px;
+            height: 15px;
+            margin: auto 0;
+        }
+
+        .mobile-txt {
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            margin: auto 0%;
+            margin-left: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col col-1">
+            <p class="header">THEO DÕI TIN TỨC VÀ DỊCH VỤ MỚI NHẤT CỦA CHÚNG TÔI!</p>
+            <div class="email">
+                <input type="text" placeholder="Địa chỉ email">
+                <button>ĐĂNG KÝ</button>
+            </div>
+            <p>Bằng cách nhấn nút Đăng ký hoặc nút gửi thông tin đi, tôi xác nhận đã đọc và đồng ý với các Quy định <strong>Chính sách quyền riêng tư</strong></p>
+            <div class="connect">
+                <p class="header">THEO DÕI CHÚNG TÔI</p>
+                <img class="connect-img" src="./image01/Facebook.svg" alt="">
+                <img class="connect-img" src="./image01/Youtube.svg" alt="">
+            </div>
+            <img class="salenoti" src="./image01/logoSaleNoti.png" alt="">
+        </div>
+
+        <div class="col col-2">
+            <p class="header">VỀ CHÚNG TÔI</p>
+            <div class="list">
+                <a class="list-item">Hệ thống Vinmec</a>
+                <a class="list-item">Đội ngũ bác sĩ</a>
+                <a class="list-item">Tin tức</a>
+                <a class="list-item">Tuyển dụng</a>
+                <a class="list-item">Sitemap</a>
+                <a class="list-item">Chính sách quyền riêng tư</a>
+            </div>
+        </div>
+
+        <div class="col col-3">
+            <p class="header">DỊCH VỤ VINMEC</p>
+            <div class="list">
+                <a class="list-item">Giới thiệu</a>
+                <a class="list-item">Đăng ký khám và tư vấn</a>
+                <a class="list-item">Gói dịch vụ</a>
+                <a class="list-item">Hướng dẫn khách hàng</a>
+                <a class="list-item">Viện nghiên cứu Tế bào gốc và Công nghệ Gen Vinmec</a>
+            </div>
+        </div>
+
+        <div class="col col-3">
+            <p class="header">TẢI ỨNG DỤNG MYVINMEC</p>
+            <div class="qr">
+                <img class="qr-img" src="./image01/onlink_to_yzzmwy_small.png" alt="">
+                <div class="mobile">
+                    <div class="mobile-btn">
+                        <img class="appstore mobile-logo" src="./image01/apple-icon.png" alt="">
+                        <p class="mobile-txt">App Store</p>
+                    </div>
+                    <div class="mobile-btn">
+                        <img class="chplay mobile-logo" src="./image01/androi-icon.png" alt="">
+                        <p class="mobile-txt">Google Play</p>
+                    </div>
+                </div>
+            </div>
+            <p class="header">ĐỐI TÁC LIÊN KẾT</p>
+            <img class="doitac" src="./image01/logoyhoccongdong.png" alt="">
+            <img class="doitac" src="./image01/BUOCTIEP Logo.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

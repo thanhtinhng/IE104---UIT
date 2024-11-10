@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: #61dafb;
+        }
+
+        .clock {
+            font-size: 48px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #61dafb;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .timer, .stopwatch {
+            font-size: 24px;
+            text-align: center;
+            margin: 10px;
+            padding: 15px;
+            border: 2px solid #61dafb;
+            border-radius: 10px;
+        }
+
+        .controls {
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #61dafb;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+            margin-bottom: 5px 0;
+        }
+
+        .header {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Clock -->
+        <div class="clock" id="clock"></div>
+
+        <!-- Countdown -->
+        <div class="timer">
+            <div class="header">Bộ đếm ngược thời gian</div>
+            <div>
+                <input type="number" id="countdown-hours" placeholder="HH" min="0" max="23" value="0"> : 
+                <input type="number" id="countdown-minutes" placeholder="MM" min="0" max="59" value="0"> : 
+                <input type="number" id="countdown-seconds" placeholder="SS" min="0" max="59" value="0">
+            </div>
+            <button onclick="startCountdown()">Bắt đầu</button>
+            <button onclick="stopCountdown()">Dừng</button>
+            <button onclick="resetCountdown()">Đặt lại</button>
+            <div id="countdown-timer-display">00:00:00.00</div>
+        </div>
+
+        <!-- Stopwatch -->
+        <div class="stopwatch">
+            <div class="header">Bộ bấm giờ</div>
+            <div id="stopwatch-display">00:00:00.00</div>
+            <div class="controls">
+                <button onclick="startStopwatch()">Bắt đầu</button>
+                <button onclick="stopStopwatch()">Dừng</button>
+                <button onclick="resetStopwatch()">Đặt lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Clock
+        updateClock = () => {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+
+            hours = hours % 12;
+            hours === 0 ? 0 : 12;
+
+            const timeString =
+                `${String(hours).padStart(2, '0')} :
+                 ${String(minutes).padStart(2, '0')} :
+                 ${String(seconds).padStart(2, '0')}
+                 ${ampm}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Countdown
+        let countdownInterval;
+        let totalTimeInMilliseconds;
+
+        startCountdown = () => {
+            const hours = parseInt(document.getElementById('countdown-hours').value) || 0;
+            const minutes = parseInt(document.getElementById('countdown-minutes').value) || 0;
+            const seconds = parseInt(document.getElementById('countdown-seconds').value) || 0;
+            const ms = 0;
+
+            totalTimeInMilliseconds = (hours * 3600 + minutes * 60 + seconds) * 1000 + ms;
+
+            clearInterval(countdownInterval);
+
+            countdownInterval = setInterval(() => {
+                if (totalTimeInMilliseconds <= 0) {
+                    clearInterval(countdownInterval);
+                } else {
+                    totalTimeInMilliseconds -= 10;
+                    const displayHours = Math.floor(totalTimeInMilliseconds / 3600000);
+                    const displayMinutes = Math.floor((totalTimeInMilliseconds % 3600000) / 60000);
+                    const displaySeconds = Math.floor((totalTimeInMilliseconds % 60000) / 1000);
+                    const displayMilliseconds = totalTimeInMilliseconds % 1000;
+                    document.getElementById('countdown-timer-display').textContent =
+                        `${String(displayHours).padStart(2, '0')}:${String(displayMinutes).padStart(2, '0')}:${String(displaySeconds).padStart(2, '0')}.${String(displayMilliseconds).padStart(3, '0')}`;
+                }
+            }, 10);
+        }
+
+        stopCountdown = () => {
+            clearInterval(countdownInterval);
+        }
+
+        resetCountdown = () => {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown-timer-display').textContent =
+                '00:00:00.00';
+        }
+
+        // Stopwatch
+        let stopwatchInterval;
+        let stopwatchTime = 0;
+
+        startStopwatch = () => {
+            clearInterval(stopwatchInterval);
+            stopwatchInterval = setInterval(() => {
+                stopwatchTime += 10;
+                const hours = Math.floor(stopwatchTime / 3600000);
+                const minutes = Math.floor((stopwatchTime % 3600000) / 60000);
+                const seconds = Math.floor((stopwatchTime % 60000) / 1000);
+                const milliseconds = stopwatchTime % 1000;
+                document.getElementById('stopwatch-display').textContent =
+                    `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
+            }, 10);
+        }
+
+        stopStopwatch = () => {
+            clearInterval(stopwatchInterval);
+        }
+
+        resetStopwatch = () => {
+            clearInterval(stopwatchInterval);
+            stopwatchTime = 0;
+            document.getElementById('stopwatch-display').textContent =
+                '00:00:00.00';
+        }
+    </script>
+</body>
+
+</html>
